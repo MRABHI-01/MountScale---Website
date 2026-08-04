@@ -1,0 +1,104 @@
+/* =========================================================
+   MountScale — Get Started page
+   Built entirely on the shared tokens (--blue, --accent, --light,
+   --text, --text-soft, --border, --ease) and reuses pricing.css's
+   hero/section language so this page feels native to the site.
+   ========================================================= */
+
+.gs-content{padding-top:10px;padding-bottom:100px;}
+
+.gs-wrap{
+  display:grid;grid-template-columns:0.85fr 1.3fr;gap:44px;align-items:start;
+}
+@media (max-width:940px){ .gs-wrap{grid-template-columns:1fr;} }
+
+/* ---------- Left: feature cards ---------- */
+.gs-features{display:flex;flex-direction:column;gap:18px;position:sticky;top:120px;}
+@media (max-width:940px){ .gs-features{position:static;} }
+
+.gs-feature-card{
+  display:flex;gap:16px;align-items:flex-start;
+  padding:22px 22px;border-radius:20px;
+  background:linear-gradient(160deg,rgba(255,255,255,0.9),rgba(234,244,255,0.55));
+  border:1px solid var(--border);
+  box-shadow:0 20px 45px -30px rgba(37,99,235,0.3);
+  transition:transform .4s var(--ease), box-shadow .4s var(--ease);
+}
+.gs-feature-card:hover{transform:translateY(-4px);box-shadow:0 26px 55px -28px rgba(37,99,235,0.38);}
+
+.gs-feature-icon{
+  flex-shrink:0;width:44px;height:44px;border-radius:13px;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  background:linear-gradient(135deg,var(--blue),var(--accent));
+  box-shadow:0 10px 22px -8px rgba(37,99,235,0.5);
+}
+.gs-feature-title{font-size:1rem;font-weight:700;color:var(--text);margin-bottom:4px;}
+.gs-feature-desc{font-size:.88rem;line-height:1.5;color:var(--text-soft);}
+
+/* ---------- Right: form card ---------- */
+.gs-card{
+  background:linear-gradient(160deg,rgba(255,255,255,0.95),rgba(234,244,255,0.55));
+  border:1px solid var(--border);border-radius:26px;
+  padding:clamp(28px,4vw,44px);
+  box-shadow:0 30px 70px -35px rgba(37,99,235,0.3);
+  backdrop-filter:blur(14px);
+}
+
+.gs-card-head{display:flex;gap:18px;align-items:flex-start;margin-bottom:30px;}
+.gs-card-icon{
+  flex-shrink:0;width:52px;height:52px;border-radius:50%;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  background:linear-gradient(135deg,var(--blue),var(--accent));
+  box-shadow:0 12px 26px -8px rgba(37,99,235,0.5);
+}
+.gs-card-head h2{font-size:1.35rem;font-weight:700;color:var(--text);letter-spacing:-0.01em;}
+.gs-head-rule{width:44px;height:3px;border-radius:99px;margin:9px 0 10px;background:linear-gradient(90deg,var(--blue),var(--accent));}
+.gs-card-head p{font-size:.92rem;color:var(--text-soft);}
+
+.gs-form{display:flex;flex-direction:column;gap:20px;}
+.gs-row{display:grid;grid-template-columns:1fr 1fr;gap:20px;}
+@media (max-width:620px){ .gs-row{grid-template-columns:1fr;} }
+
+.gs-field label{display:block;margin-bottom:8px;font-size:.86rem;font-weight:600;color:var(--text);}
+.req{color:#ef4444;}
+
+.gs-field input,
+.gs-field select,
+.gs-field textarea{
+  width:100%;padding:12px 14px;border-radius:12px;font-size:.92rem;font-family:inherit;
+  background:#fff;border:1px solid var(--border);color:var(--text);
+  transition:border-color .3s ease, box-shadow .3s ease;
+}
+.gs-field textarea{resize:vertical;min-height:96px;}
+.gs-field input::placeholder,
+.gs-field textarea::placeholder{color:#9aa8bd;}
+.gs-field input:focus,
+.gs-field select:focus,
+.gs-field textarea:focus{
+  outline:none;border-color:var(--blue);
+  box-shadow:0 0 0 4px rgba(37,99,235,0.12);
+}
+.gs-field select{appearance:none;-webkit-appearance:none;
+  background-image:url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%23475569' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'><path d='m6 9 6 6 6-6'/></svg>");
+  background-repeat:no-repeat;background-position:right 14px center;background-size:16px;
+  padding-right:38px;
+}
+
+.gs-input-icon{position:relative;display:flex;align-items:center;}
+.gs-input-icon svg{position:absolute;left:14px;color:#9aa8bd;pointer-events:none;}
+.gs-input-icon input{padding-left:40px;}
+
+.gs-field-full{width:100%;}
+
+.gs-submit{width:100%;justify-content:center;margin-top:6px;}
+.gs-submit:disabled{opacity:.6;pointer-events:none;}
+
+.gs-success{
+  display:none;flex-direction:column;align-items:center;text-align:center;gap:10px;
+  padding:30px 10px 6px;
+}
+.gs-success svg{color:#16a34a;}
+.gs-success h3{font-size:1.15rem;font-weight:700;color:var(--text);}
+.gs-success p{font-size:.92rem;color:var(--text-soft);}
+.gs-form.submitted > *:not(.gs-success){display:none;}
+.gs-form.submitted .gs-success{display:flex;}

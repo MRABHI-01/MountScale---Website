@@ -1,0 +1,328 @@
+/* =========================================================
+   MountScale — About page (redesigned)
+   Built on top of the shared design tokens/classes in index.css
+   (--blue, --accent, --light, --bg, --text, --text-soft, --border,
+   --glass, --shadow-soft, --ease, plus shared .eyebrow / .section-*
+   / .dash-wrap / footer classes — not redefined here, only extended)
+   ========================================================= */
+
+/* ---------- About hero ---------- */
+.about-hero{
+  position:relative;overflow:hidden;
+  padding:170px 24px 70px;
+  background:radial-gradient(ellipse 80% 60% at 12% 0%, var(--light) 0%, rgba(234,244,255,0) 60%), var(--bg);
+}
+.about-hero-glow{
+  position:absolute;top:-160px;left:14%;
+  width:600px;height:600px;border-radius:50%;
+  background:radial-gradient(circle, rgba(96,165,250,0.2), transparent 70%);
+  pointer-events:none;
+}
+.about-hero-inner{
+    position: relative;
+    z-index: 1;
+
+    display: grid;
+    grid-template-columns: 1fr 1.2fr; /* Left text | Right video */
+    gap: 60px;
+    align-items: center;
+}
+@media (max-width:940px){
+  .about-hero-inner{grid-template-columns:1fr;}
+}
+
+.about-headline{
+  margin-top:18px;
+  font-size:clamp(2rem,4.2vw,3rem);
+  line-height:1.14;font-weight:700;letter-spacing:-0.03em;color:var(--text);
+}
+.about-headline .grad{
+  background:linear-gradient(100deg,#0055EC);
+  -webkit-background-clip:text;background-clip:text;color:transparent;
+}
+.about-sub{
+  margin-top:18px;
+  font-size:clamp(1rem,1.4vw,1.08rem);line-height:1.65;color:var(--text-soft);
+  max-width:480px;
+}
+
+/* visual: looping video */
+.about-visual{position:relative;}
+.about-video{
+  width:100%;height:520px;object-fit:cover;border-radius:26px;
+  box-shadow:var(--shadow-soft);
+  border:1px solid var(--border);
+  display:block;background:#0b2a59;
+}
+.about-quote{
+  position:absolute;bottom:34px;left:-24px;max-width:270px;
+  background:var(--glass);backdrop-filter:blur(14px) saturate(160%);-webkit-backdrop-filter:blur(14px) saturate(160%);
+  border:1px solid var(--border);border-radius:18px;
+  padding:22px 22px 20px;
+  box-shadow:0 24px 50px -22px rgba(15,23,42,0.35);
+}
+.about-quote .quote-mark{color:rgba(37,99,235,0.25);margin-bottom:4px;}
+.about-quote p{font-size:.92rem;line-height:1.5;font-weight:600;color:var(--text);}
+@media (max-width:640px){
+  .about-video{height:360px;}
+  .about-quote{left:0;right:0;margin:0 auto;bottom:18px;max-width:88%;}
+}
+
+/* ---------- Our Mission ---------- */
+.about-mission{padding-top:20px;}
+.mission-wrap{
+  display:grid;grid-template-columns:1.3fr 1fr;gap:48px;align-items:center;
+}
+@media (max-width:900px){ .mission-wrap{grid-template-columns:1fr;} }
+.mission-copy h2{
+  margin-top:12px;font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700;
+  letter-spacing:-0.03em;line-height:1.16;
+}
+.mission-copy p{margin-top:18px;color:var(--text-soft);font-size:1.04rem;line-height:1.7;max-width:600px;}
+.mission-tags{margin-top:24px;display:flex;gap:10px;flex-wrap:wrap;}
+.mission-tags .tag.blue{
+  font-size:.82rem;font-weight:700;padding:8px 16px;border-radius:999px;
+  background:rgba(37,99,235,0.1);color:var(--blue);
+}
+.mission-card{
+  padding:36px 32px;border-radius:24px;text-align:center;
+  background:linear-gradient(165deg,#1d4ed8,var(--blue) 55%,var(--accent));
+  color:#fff;box-shadow:0 30px 70px -24px rgba(37,99,235,0.5);
+}
+.mission-icon{
+  width:52px;height:52px;border-radius:14px;margin:0 auto 18px;
+  background:rgba(255,255,255,0.18);display:flex;align-items:center;justify-content:center;
+}
+.mission-card p{font-size:1.08rem;font-weight:700;line-height:1.5;}
+.mission-card span{display:block;margin-top:14px;font-size:.82rem;color:rgba(255,255,255,0.8);font-weight:600;}
+
+/* ---------- Principles ---------- */
+.about-principles{padding-top:20px;}
+.principles-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px;}
+@media (max-width:900px){ .principles-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:560px){ .principles-grid{grid-template-columns:1fr;} }
+.principle-card{
+  padding:30px 26px;border-radius:22px;
+  background:linear-gradient(160deg,rgba(255,255,255,0.92),rgba(234,244,255,0.55));
+  border:1px solid var(--border);backdrop-filter:blur(14px);
+  box-shadow:0 24px 50px -28px rgba(37,99,235,0.22);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.principle-card:hover{transform:translateY(-6px);box-shadow:0 34px 70px -30px rgba(37,99,235,0.3);}
+.principle-icon{
+  width:44px;height:44px;border-radius:13px;
+  background:rgba(37,99,235,0.12);color:var(--blue);
+  display:flex;align-items:center;justify-content:center;margin-bottom:16px;
+}
+.principle-card h4{font-size:1.04rem;font-weight:700;color:var(--text);letter-spacing:-0.01em;}
+.principle-card p{margin-top:8px;font-size:.9rem;line-height:1.6;color:var(--text-soft);}
+
+/* ---------- Our Foundation: Identity / Mission / Vision (stacked cards) ---------- */
+.about-foundation{padding-top:16px;}
+
+.foundation-stack{
+  display:flex;gap:14px;height:560px;align-items:stretch;
+}
+
+.foundation-card{
+  position:relative;flex:0.62;min-width:0;overflow:hidden;
+  border-radius:26px;border:1px solid var(--border);
+  background:#0b2a59;cursor:pointer;padding:0;
+  box-shadow:0 24px 50px -28px rgba(37,99,235,0.28);
+  transition:flex 0.7s var(--ease), box-shadow .5s var(--ease);
+  font-family:inherit;text-align:left;
+}
+.foundation-card:hover{box-shadow:0 30px 60px -26px rgba(37,99,235,0.4);}
+.foundation-card.is-active{flex:3.2;}
+
+.fc-img{
+  position:absolute;inset:0;width:100%;height:100%;object-fit:cover;
+  transition:transform 1.1s var(--ease);
+}
+.foundation-card:hover .fc-img{transform:scale(1.05);}
+
+.fc-scrim{
+  position:absolute;inset:0;
+  background:linear-gradient(180deg, rgba(11,42,89,0.15) 0%, rgba(11,42,89,0.2) 45%, rgba(8,20,46,0.92) 100%);
+  transition:opacity .5s ease;
+}
+.foundation-card:not(.is-active) .fc-scrim{background:linear-gradient(180deg, rgba(11,42,89,0.25) 0%, rgba(8,20,46,0.55) 100%);}
+
+.fc-index{
+  position:absolute;top:24px;left:24px;z-index:2;
+  font-size:.76rem;font-weight:800;letter-spacing:.1em;color:rgba(255,255,255,0.9);
+  background:rgba(255,255,255,0.16);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);
+  padding:6px 13px;border-radius:999px;
+}
+
+.fc-collapsed-label{
+  position:absolute;left:50%;top:50%;z-index:2;
+  transform:translate(-50%,-50%) rotate(-90deg);transform-origin:center;
+  white-space:nowrap;font-weight:800;font-size:1.05rem;color:#fff;letter-spacing:.01em;
+  transition:opacity .35s ease;
+}
+.foundation-card.is-active .fc-collapsed-label{opacity:0;pointer-events:none;}
+
+.fc-content{
+  position:absolute;left:0;right:0;bottom:0;z-index:2;
+  padding:38px 34px 34px;display:flex;flex-direction:column;gap:10px;
+  opacity:0;transform:translateY(18px);
+  transition:opacity .5s ease .1s, transform .5s ease .1s;
+}
+.foundation-card.is-active .fc-content{opacity:1;transform:translateY(0);}
+
+.fc-eyebrow{font-size:.76rem;font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:rgba(255,255,255,0.78);}
+.fc-title{font-size:clamp(1.3rem,2.4vw,1.7rem);font-weight:800;color:#fff;letter-spacing:-0.02em;}
+.fc-desc{font-size:.94rem;line-height:1.65;color:rgba(255,255,255,0.88);max-width:640px;}
+
+@media (max-width:900px){
+  .foundation-stack{height:auto;flex-direction:column;}
+  .foundation-card{flex:none;height:88px;}
+  .foundation-card.is-active{height:460px;}
+  .fc-collapsed-label{
+    bottom:auto;top:50%;left:26px;
+    transform:translateY(-50%) rotate(0deg);
+  }
+  .fc-index{top:18px;left:18px;}
+  .fc-content{padding:28px 24px 26px;}
+}
+
+/* ---------- Brand story ---------- */
+.about-story{padding-top:10px;}
+.story-wrap{display:grid;grid-template-columns:.9fr 1.1fr;gap:56px;align-items:center;}
+@media (max-width:900px){ .story-wrap{grid-template-columns:1fr;} }
+.story-copy h2{margin-top:12px;font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700;letter-spacing:-0.03em;line-height:1.16;}
+.story-copy p{margin-top:16px;color:var(--text-soft);font-size:1.02rem;line-height:1.75;}
+.story-copy strong{color:var(--blue);}
+
+.story-visual{
+  position:relative;height:340px;border-radius:26px;overflow:hidden;
+  background:linear-gradient(180deg,#dbeafe 0%,var(--light) 55%,#fff 100%);
+  border:1px solid var(--border);box-shadow:var(--shadow-soft);
+}
+.story-photo{
+  width:100%;height:100%;
+  object-fit:cover;object-position:center 65%;
+  display:block;
+}
+.story-photo-overlay{
+  position:absolute;inset:0;pointer-events:none;
+  background:linear-gradient(180deg, rgba(37,99,235,0.16) 0%, rgba(37,99,235,0) 45%, rgba(15,23,42,0.28) 100%);
+}
+
+/* ---------- Our Core Belief (replaces stats bar) ---------- */
+.about-belief-section{padding:60px 24px 40px;}
+.about-belief{
+  border-radius:28px;padding:56px 40px;text-align:center;
+  background:linear-gradient(165deg,#1d4ed8,var(--blue) 55%,var(--accent));
+  box-shadow:0 30px 70px -24px rgba(37,99,235,0.5);
+  color:#fff;position:relative;overflow:hidden;
+}
+.belief-eyebrow{
+  display:inline-block;font-size:12px;font-weight:700;letter-spacing:.16em;text-transform:uppercase;
+  color:rgba(255,255,255,0.85);background:rgba(255,255,255,0.14);padding:7px 16px;border-radius:999px;
+  margin-bottom:22px;
+}
+.belief-statement{
+  max-width:780px;margin:0 auto;font-size:clamp(1.4rem,3vw,2rem);font-weight:700;
+  line-height:1.4;letter-spacing:-0.01em;
+}
+.belief-sub{margin:18px auto 0;max-width:560px;color:rgba(255,255,255,0.82);font-size:1rem;line-height:1.6;}
+
+/* ---------- Logo & name meaning ---------- */
+.about-logo-meaning{padding-top:10px;}
+.logo-wrap{display:grid;grid-template-columns:.7fr 1.3fr;gap:52px;align-items:center;}
+@media (max-width:900px){ .logo-wrap{grid-template-columns:1fr;} }
+.logo-mark-card{
+  border-radius:26px;padding:60px 34px;display:flex;align-items:center;justify-content:center;
+  background:linear-gradient(160deg,rgba(255,255,255,0.92),rgba(234,244,255,0.55));
+  border:1px solid var(--border);box-shadow:0 24px 50px -28px rgba(37,99,235,0.22);
+}
+.logo-mark-img{max-width:220px;width:100%;}
+.logo-copy h2{margin-top:12px;font-size:clamp(1.7rem,3.2vw,2.4rem);font-weight:700;letter-spacing:-0.03em;line-height:1.16;}
+.logo-copy > p{margin-top:16px;color:var(--text-soft);font-size:1.02rem;line-height:1.75;max-width:640px;}
+.logo-meaning-grid{margin-top:26px;display:grid;grid-template-columns:1fr 1fr;gap:18px;}
+@media (max-width:560px){ .logo-meaning-grid{grid-template-columns:1fr;} }
+.logo-meaning-item{
+  padding:20px 20px;border-radius:16px;border:1px solid var(--border);background:#fbfdff;
+}
+.lm-letter{display:inline-block;font-size:1.15rem;font-weight:800;color:var(--blue);letter-spacing:-0.01em;margin-bottom:8px;}
+.logo-meaning-item p{color:var(--text-soft);font-size:.9rem;line-height:1.6;}
+.logo-color-note{margin-top:20px;font-size:.9rem;color:var(--text-soft);line-height:1.6;font-style:italic;}
+
+/* ---------- Leadership team (redesigned) ---------- */
+.about-team{position:relative;padding:130px 24px;overflow:hidden;isolation:isolate;}
+.team-bg{
+  position:absolute;inset:0;z-index:-1;
+  background:
+    linear-gradient(180deg, rgba(234,244,255,.55) 0%, rgba(255,255,255,.85) 55%, #fff 100%),
+    url("https://images.unsplash.com/photo-1454496522488-7a8e488e8606?fm=jpg&q=70&w=1800&auto=format&fit=crop") center 30% / cover no-repeat;
+}
+.team-head{max-width:640px;margin:0 auto 56px;text-align:center;}
+.team-eyebrow{
+  display:inline-flex;align-items:center;gap:8px;
+  background:rgba(37,99,235,0.12);padding:8px 16px;border-radius:999px;margin-bottom:6px;
+}
+.team-head h2{font-size:clamp(2rem,4vw,3rem);font-weight:800;letter-spacing:-0.03em;color:var(--text);}
+.team-head p{margin-top:14px;color:var(--text-soft);font-size:1.05rem;}
+.team-divider{margin-top:18px;opacity:.7;}
+.team-divider path{stroke:var(--blue);}
+
+.team-grid{
+  display:grid;grid-template-columns:repeat(4,1fr);gap:24px;
+}
+@media (max-width:1100px){ .team-grid{grid-template-columns:repeat(2,1fr);} }
+@media (max-width:560px){ .team-grid{grid-template-columns:1fr;} }
+
+.team-card{
+  position:relative;overflow:hidden;text-align:center;
+  padding:36px 26px 30px;border-radius:24px;
+  background:linear-gradient(160deg,rgba(255,255,255,0.92),rgba(234,244,255,0.55));
+  border:1px solid var(--border);backdrop-filter:blur(14px);
+  box-shadow:0 24px 50px -28px rgba(37,99,235,0.22);
+  transition:transform .5s var(--ease), box-shadow .5s var(--ease);
+}
+.team-card:hover{transform:translateY(-6px);box-shadow:0 34px 70px -30px rgba(37,99,235,0.3);}
+.team-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+}
+.accent-blue::before{background:linear-gradient(90deg,#2563EB,#60A5FA);}
+.accent-green::before{background:linear-gradient(90deg,#16a34a,#4ade80);}
+.accent-orange::before{background:linear-gradient(90deg,#ea580c,#fb923c);}
+.accent-purple::before{background:linear-gradient(90deg,#9333ea,#c084fc);}
+
+.team-card::before{
+  content:'';position:absolute;top:0;left:0;right:0;height:4px;
+  background:linear-gradient(90deg,var(--blue),var(--accent));
+}
+
+.team-avatar-mono{
+  width:104px;height:104px;border-radius:50%;
+  margin:0 auto;display:flex;align-items:center;justify-content:center;
+  font-size:1.6rem;font-weight:800;letter-spacing:-0.02em;color:#fff;
+  background:linear-gradient(145deg,var(--blue),var(--accent));
+  box-shadow:0 0 0 4px #fff,0 8px 24px -8px rgba(37,99,235,0.45);
+}
+
+.team-role-pill{
+  display:inline-block;margin-top:8px;font-size:.76rem;font-weight:700;
+  letter-spacing:.04em;text-transform:uppercase;padding:5px 14px;border-radius:999px;
+  background:rgba(37,99,235,0.12);color:var(--blue);
+}
+
+.team-bio{
+  margin-top:16px;font-size:.88rem;line-height:1.6;color:var(--text-soft);
+  display:-webkit-box;-webkit-line-clamp:4;-webkit-box-orient:vertical;overflow:hidden;
+}
+
+.team-linkedin{
+  margin-top:22px;display:flex;align-items:center;justify-content:center;gap:8px;
+  padding:11px 0;border-radius:12px;font-size:.86rem;font-weight:700;
+  background:rgba(10,102,194,0.1);color:#0A66C2;
+  transition:background .3s ease,transform .3s var(--ease);
+}
+.team-linkedin:hover{background:rgba(10,102,194,0.16);transform:translateY(-2px);}
+
+/* nav active state (about.html only) */
+.nav-center a.active{opacity:1;}
+.nav-center a.active::after{width:100%;}

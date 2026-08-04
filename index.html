@@ -1,0 +1,695 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>MountScale — Scaling Without Limits</title>
+<meta name="description" content="MountScale unifies AI, SAS, automation, customer engagement, dealership management, sales pipelines, inventory tracking, and service operations into one intelligent platform." />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="loader.css">
+<link rel="stylesheet" href="index.css">
+</head>
+<body>
+<div id="loader">
+  <div class="loader-card">
+    <div class="loader-mark">
+      <div class="loader-mark-depth"><img src="mountscale-mark.png" alt=""></div>
+      <img class="loader-mark-base" src="mountscale-mark.png" alt="">
+      <div class="loader-mark-fill"><img src="mountscale-mark.png" alt=""></div>
+    </div>
+  </div>
+</div>
+
+<header class="nav" id="navbar">
+  <a href="#" class="nav-logo"><img src="mountscale-logo.png" alt="MountScale"/></a>
+  <nav class="nav-center">
+    <a href="#home">Home</a>
+    <a href="products.html">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About Us</a>
+  </nav>
+  <!-- <a href="get-started.html" class="nav-cta">Get Started
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a> -->
+</header>
+
+<section class="hero" id="home">
+
+  <!-- ================= Video hero background (seamless crossfade loop) ================= -->
+<video class="hero-video hero-video-a" muted playsinline autoplay loop preload="auto" poster="hero-poster.jpg" aria-hidden="true">
+  <source src="hero-bg1.mp4" type="video/mp4">
+</video>
+<video class="hero-video hero-video-b" muted playsinline autoplay loop preload="auto" aria-hidden="true">
+  <source src="hero-bg1.mp4" type="video/mp4">
+</video>
+<div class="hero-video-overlay" aria-hidden="true"></div>
+<!-- ================= /video hero background ================= -->
+  <!-- <div class="float-card fc-profile" data-depth="0.6">
+    <div class="fc-title"><span class="fc-icon">◐</span> Sarah Chen</div>
+    <div class="fc-sub">Interested — SUV, Test Drive Booked</div>
+    <span class="pill" style="margin-top:8px;display:inline-block;">Hot Lead</span>
+  </div>
+
+  <div class="float-card fc-chat" data-depth="0.9">
+    <div class="fc-title"><span class="fc-icon">💬</span> AI Assistant</div>
+    <div class="fc-sub">"I've scheduled your test drive for Saturday at 2 PM."</div>
+  </div>
+
+  <div class="float-card fc-pipeline" data-depth="0.5">
+    <div class="fc-title"><span class="fc-icon">◧</span> Sales Pipeline</div>
+    <div class="fc-sub">Negotiation · 12 deals</div>
+    <div class="bar"><i style="width:64%"></i></div>
+  </div>
+
+  <div class="float-card fc-inventory" data-depth="0.7">
+    <div class="fc-title"><span class="fc-icon">▤</span> Inventory</div>
+    <div class="fc-sub">248 vehicles · 6 lots</div>
+  </div>
+
+  <div class="float-card fc-testdrive" data-depth="0.4">
+    <div class="fc-title"><span class="fc-icon">◑</span> Test Drive</div>
+    <div class="fc-sub">Model X · Today, 2:00 PM</div>
+  </div>
+
+  <div class="float-card fc-service" data-depth="0.6">
+    <div class="fc-title"><span class="fc-icon">⚙</span> Service Reminder</div>
+    <div class="fc-sub">Oil change due · 3 vehicles</div>
+  </div>
+
+  <div class="float-card fc-finance" data-depth="0.8">
+    <div class="fc-title"><span class="fc-icon">✓</span> Finance</div>
+    <div class="fc-sub">Approved · $42,500</div>
+  </div>
+
+  <div class="float-card fc-analytics" data-depth="0.5">
+    <div class="fc-title"><span class="fc-icon">▲</span> Analytics</div>
+    <div class="bar"><i style="width:82%"></i></div>
+    <div class="fc-sub" style="margin-top:6px;">Conversion +18%</div>
+  </div>
+
+  <div class="float-card fc-notify" data-depth="0.9">
+    <div class="fc-title"><span class="fc-icon">●</span> New Lead Captured</div>
+    <div class="fc-sub">Website form · Auto-assigned to Mia</div>
+  </div>
+
+  <div class="float-card fc-dealer" data-depth="0.4">
+    <div class="fc-title"><span class="fc-icon">◎</span> Dealer Network</div>
+    <div class="fc-sub">14 locations live</div>
+  </div> -->
+
+  <div class="hero-inner">
+    <!-- <div class="eyebrow reveal"><span class="dot"></span> AI-Powered Automotive SAS</div> -->
+    <h1 class="hero-headline reveal">Building the Future of Business <span class="grad">Without Limits</span></h1>
+
+    <!-- <div class="car-stage reveal">
+      <canvas id="car-canvas"></canvas>
+    </div> -->
+
+    <p class="hero-sub reveal">Buisness challanges evolve. From today's complexities to tomorrow's opportunities. MountScale builds solutions that help buisness move forward with confidence.</p>
+    <!-- <div class="hero-ctas reveal">
+      <a href="#get-started" class="btn-primary">Get Started
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+      </a>
+      <a href="#demo" class="btn-secondary">Book Demo</a>
+    </div> -->
+    <div class="hero-quotes reveal" id="quotes">
+      <span class="active">Automation that drives every customer journey.</span>
+      <span>Built for dealerships that refuse to slow down.</span>
+      <span>AI-powered SAS designed for automotive excellence.</span>
+      <span>Every lead matters. Every follow-up is automated.</span>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <div class="section-eyebrow"></div>
+      <h2>Our Product</h2>
+    </div>
+    <div class="products-grid">
+      <!-- <div class="product-card">
+        <div class="pc-glow"></div>
+        <div class="pc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>
+        </div>
+        <h3>AI Chatbot</h3>
+        <p>AI-powered customer conversations that qualify leads, answer queries instantly, and book appointments automatically.</p>
+        <a href="products.html#ai-chatbot" class="pc-link">Explore
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div> -->
+      <div class="product-card">
+        <div class="pc-glow"></div>
+        <div class="pc-icon">
+          <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect width="8" height="8" x="3" y="3" rx="2"/><path d="M7 11v4a2 2 0 0 0 2 2h4"/><rect width="8" height="8" x="13" y="13" rx="2"/></svg>
+        </div>
+        <h3>Sales Automation System</h3>
+        <p>Transform your sales process with our intelligent automation that gives your team more time to focus on customers rather than administration.</p>
+        <a href="products.html#automation-sas" class="pc-link">Explore
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="engine">
+  <div class="section-inner engine-wrap">
+
+    <div class="engine-content reveal">
+      <!-- <div class="section-eyebrow">THE ENGINE BENEATH</div> -->
+      <h2>You see the summit.<br>We built the <span class="grad">mountain</span>.</h2>
+      <p>Every closed deal, happy customer, number on your dashboard is the visible tip. MountScale is the entire mountain underneath - capturing leads, automating follow ups, and running the pipeline so your team never has to.</p>
+      <div class="engine-stats">
+        <div class="engine-stat">
+          <div class="es-value" data-count="1284">0</div>
+          <div class="es-label">Active Leads</div>
+        </div>
+        <div class="engine-stat">
+          <div class="es-value" data-count="342">0</div>
+          <div class="es-label">Deals Closed</div>
+        </div>
+        <div class="engine-stat">
+          <div class="es-value" data-count="27" data-suffix="%">0%</div>
+          <div class="es-label">Conversion</div>
+        </div>
+      </div>
+    </div>
+
+    <div class="engine-visual reveal">
+
+  <!-- Mountain Top / Above Water (WHAT YOU SEE) -->
+  <div class="engine-sky">
+    <div class="peak-badges">
+      <div class="peak-badge">
+        <span class="pb-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+        </span>
+        More Revenue
+      </div>
+      <div class="peak-badge">
+        <span class="pb-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20 6 9 17l-5-5"/></svg>
+        </span>
+        Closed Deals
+      </div>
+      <div class="peak-badge">
+        <span class="pb-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.3"><path d="M20.84 4.61a5.5 5.5 0 0 0-7.78 0L12 5.67l-1.06-1.06a5.5 5.5 0 0 0-7.78 7.78l1.06 1.06L12 21l7.78-7.55 1.06-1.06a5.5 5.5 0 0 0 0-7.78z"/></svg>
+        </span>
+        Happy Customers
+      </div>
+    </div>
+
+    <!-- Mountain Top Extracted Image Container -->
+    <div class="iceberg-img-wrap top-wrap">
+      <img src="iceberg.png" alt="Mountain Summit" class="iceberg-top-img" />
+    </div>
+  </div>
+
+  <div class="ground-line"><span>SURFACE</span></div>
+
+  <!-- Underwater / Root Engine (WHAT POWERS IT) -->
+  <div class="engine-roots">
+    <span class="engine-tag engine-tag-dark">WHAT POWERS IT</span>
+
+    <!-- Underwater Iceberg Background Image Container -->
+    <div class="iceberg-img-wrap bottom-wrap">
+      <img src="iceberg.jpg" alt="Mountain Underwater Structure" class="iceberg-bottom-img" />
+    </div>
+
+    <!-- Features overlayed on top of underwater portion -->
+    <div class="roots-list">
+      <div class="root-item">
+        <span class="root-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/></svg>
+        </span>
+        Leads Capture
+      </div>
+      <div class="root-item">
+        <span class="root-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><ellipse cx="12" cy="5" rx="8" ry="3"/><path d="M4 5v6c0 1.66 3.58 3 8 3s8-1.34 8-3V5M4 11v6c0 1.66 3.58 3 8 3s8-1.34 8-3v-6"/></svg>
+        </span>
+        Pipeline
+      </div>
+      <div class="root-item">
+        <span class="root-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </span>
+        Smart Follow-ups
+      </div>
+      <div class="root-item">
+        <span class="root-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+        </span>
+        Meetings &amp; Scheduling
+      </div>
+      <div class="root-item">
+        <span class="root-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M12 3v2m0 14v2M4.2 4.2l1.4 1.4m12.8 12.8 1.4 1.4M3 12h2m14 0h2M4.2 19.8l1.4-1.4m12.8-12.8 1.4-1.4"/><circle cx="12" cy="12" r="4"/></svg>
+        </span>
+        AI Intelligence
+      </div>
+      <div class="root-item">
+        <span class="root-icon">
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M13 2 3 14h7l-1 8 10-12h-7z"/></svg>
+        </span>
+        Deal Close
+      </div>
+      
+    </div>
+  </div>
+
+</div>
+
+  </div>
+</section>
+
+<section id="workflow">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <!-- <div class="section-eyebrow">THE PROCESS</div> -->
+      <h2>Sales Automation <span class="grad">Workflow</span></h2>
+      <p>A seamless 8-step journey from lead capture to accurate forecasting, powered by intelligent automation.</p>
+    </div>
+
+    <div class="flow-slider">
+      <!-- <button class="flow-nav flow-prev" id="flowPrev" aria-label="Previous steps" disabled>
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M15 18l-6-6 6-6"/></svg>
+      </button> -->
+
+      <div class="flow-track" id="flowTrack">
+      <div class="flow-row">
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">1</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4"/><path d="m10 17 5-5-5-5"/><path d="M15 12H3"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">Lead Arrives</h4>
+          <p class="flow-desc">New prospect enters the system.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">2</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/><path d="M8 16h.01"/><path d="M16 16h.01"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">AI Qualifies</h4>
+          <p class="flow-desc">Scores intent, fit &amp; buying signals.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">3</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="16" rx="2"/><circle cx="9" cy="10" r="2.2"/><path d="M6 17c0-2 1.5-3.2 3-3.2s3 1.2 3 3.2"/><path d="m15.5 11 1.5 1.5L20.5 9"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">Assigns Salesperson</h4>
+          <p class="flow-desc">Routes to the best-fit rep instantly.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">4</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M3 10h18M8 2v4M16 2v4"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">Schedule Meetings</h4>
+          <p class="flow-desc">Auto-books the call and captures it.</p>
+        </div>
+      </div>
+
+      <div class="flow-row">
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">5</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6"/><path d="M9 13h6M9 17h6M9 9h1"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">Generates Notes</h4>
+          <p class="flow-desc">AI writes a clean meeting summary.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">6</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">Sends Reminder</h4>
+          <p class="flow-desc">Nudges the prospect ahead of time.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">7</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 8.97 5.7a2 2 0 0 0 2.06 0L22 7"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">Creates Follow-up Email</h4>
+          <p class="flow-desc">Drafts a personalized next step.</p>
+        </div>
+
+        <div class="flow-step">
+          <div class="flow-icon-wrap">
+            <span class="flow-num">8</span>
+            <div class="flow-icon">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 3v18h18"/><path d="m7 14 4-4 3 3 5-6"/></svg>
+            </div>
+          </div>
+          <h4 class="flow-title">Forecast Updated</h4>
+          <p class="flow-desc">Pipeline &amp; revenue refresh live.</p>
+        </div>
+      </div>
+      </div>
+
+      <!-- <button class="flow-nav flow-next" id="flowNext" aria-label="Next steps">
+        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4"><path d="M9 18l6-6-6-6"/></svg>
+      </button> -->
+    </div>
+
+    <!-- <div class="flow-dots" id="flowDots">
+      <button class="flow-dot active" id="flowDot0" aria-label="Show steps 1 to 4"></button>
+      <button class="flow-dot" id="flowDot1" aria-label="Show steps 5 to 8"></button>
+    </div> -->
+  </div>
+</section>
+
+<section id="challenges">
+    <div class="section-inner">
+
+        <div class="section-head reveal">
+            <h2>Repetitive &amp;<span class="grad"> Time-consuming Sales Workflow</span></h2>
+
+            <p>
+                Sales teams spend hours on manual tasks instead of selling. 
+            </p>
+        </div>
+
+        <div class="challenge-wrapper">
+
+            <!-- LEFT -->
+
+            <div class="challenge-column">
+
+                <div class="challenge-label problem">
+                    INDUSTRY CHALLENGES
+                </div>
+
+                <div class="challenge-card left">
+                    <div class="challenge-icon danger">
+                        <!-- icon -->
+                    </div>
+
+                    <h3>Repetitive Sales Workflows</h3>
+
+                    <p>
+                        Sales teams spend hours on manual tasks instead of selling.
+                    </p>
+
+                    <span class="tag red">
+                        Productivity Loss
+                    </span>
+                </div>
+
+
+                <div class="challenge-card left">
+
+                    <div class="challenge-icon danger"></div>
+
+                    <h3>Too Many Tools</h3>
+
+                    <p>
+                        Teams constantly switch between CRM, email,
+                        spreadsheets and calendars.
+                    </p>
+
+                    <span class="tag red">
+                        Context Switching
+                    </span>
+
+                </div>
+
+
+                <div class="challenge-card left">
+
+                    <div class="challenge-icon danger"></div>
+
+                    <h3>Missed Follow-ups</h3>
+
+                    <p>
+                        Opportunities disappear because reminders are forgotten.
+                    </p>
+
+                    <span class="tag red">
+                        Lost Revenue
+                    </span>
+
+                </div>
+
+
+                <div class="challenge-card left">
+
+                    <div class="challenge-icon danger"></div>
+
+                    <h3>Scattered Customer Data</h3>
+
+                    <p>
+                        Emails, calls, notes and documents live everywhere.
+                    </p>
+
+                    <span class="tag red">
+                        Fragmented Data
+                    </span>
+
+                </div>
+
+
+                <div class="challenge-card left">
+
+                    <div class="challenge-icon danger"></div>
+
+                    <h3>Poor Pipeline Visibility</h3>
+
+                    <p>
+                        Managers struggle to identify stalled deals.
+                    </p>
+
+                    <span class="tag red">
+                        Low Forecast Accuracy
+                    </span>
+
+                </div>
+
+            </div>
+
+
+            <!-- CENTER -->
+
+            <div class="solution-core">
+
+                <div class="core-ring"></div>
+
+                <div class="core-box">
+
+                    <div class="core-icon">
+
+                    </div>
+
+                    <h2>MountScale</h2>
+
+                    <p>AI Automation Engine</p>
+
+                </div>
+
+            </div>
+
+
+            <!-- RIGHT -->
+
+            <div class="challenge-column">
+
+                <div class="challenge-label solution">
+                    MOUNTSCALE SOLUTIONS
+                </div>
+
+                <div class="challenge-card right">
+
+                    <div class="challenge-icon success"></div>
+
+                    <h3>Sales Automation</h3>
+
+                    <p>
+                        Automatically assigns leads, schedules meetings,
+                        updates CRM, creates tasks and follow-ups.
+                    </p>
+
+                    <span class="tag blue">
+                        Fully Automated
+                    </span>
+
+                </div>
+
+
+                <div class="challenge-card right">
+
+                    <div class="challenge-icon success"></div>
+
+                    <h3>Unified Workspace</h3>
+
+                    <p>
+                        CRM, email, calendar and communication
+                        managed inside one platform.
+                    </p>
+
+                    <span class="tag blue">
+                        One Platform
+                    </span>
+
+                </div>
+
+
+                <div class="challenge-card right">
+
+                    <div class="challenge-icon success"></div>
+
+                    <h3>Intelligent Follow-ups</h3>
+
+                    <p>
+                        AI tracks every interaction and reminds your
+                        team automatically.
+                    </p>
+
+                    <span class="tag blue">
+                        Never Miss Leads
+                    </span>
+
+                </div>
+
+
+                <div class="challenge-card right">
+
+                    <div class="challenge-icon success"></div>
+
+                    <h3>360° Customer Timeline</h3>
+
+                    <p>
+                        Every email, note, activity and document
+                        stays in one place.
+                    </p>
+
+                    <span class="tag blue">
+                        Unified Customer View
+                    </span>
+
+                </div>
+
+
+                <div class="challenge-card right">
+
+                    <div class="challenge-icon success"></div>
+
+                    <h3>Live Sales Dashboard</h3>
+
+                    <p>
+                        Real-time pipeline visibility,
+                        forecasts and deal analytics.
+                    </p>
+
+                    <span class="tag blue">
+                        Actionable Insights
+                    </span>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<section id="get-started">
+  <div class="cta-section reveal">
+    <div class="cta-glow"></div>
+    <div class="cta-glow2"></div>
+    <h2>Ready to Scale Without Limits?</h2>
+    <p>Let's Build What's Next - Together.</p>
+    <a href="get-started.html" class="btn-big">Get Started
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+
+
+<footer id="about">
+  <div class="footer-watermark" aria-hidden="true"><img src="mountscale-logo.png" alt=""/></div>
+  <div class="footer-inner">
+    <div class="footer-social">
+      <h4>Find Us</h4>
+      <div class="social-row">
+        <a href="https://x.com/mountscale" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.94 2h6.4l4.42 5.84L18.9 2Zm-1.1 18h1.73L8.4 3.9H6.54L17.8 20Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/company/mountscale" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://instagram.com/mountscale" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="products.html">Products</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <div class="contact-row">
+        <span class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <p>+91 63668 67327</p>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </span>
+        <p>bharatkumarachary25@gmail.com</p>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <p>Plot - 695, Sikharchandi Nagar, Bhubaneswar, Odisha, 751024</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="footer-tagline-row">Scaling Without Limits</div> -->
+
+  <div class="footer-bottom">© 2026 MountScale. All rights reserved.</div>
+</footer>
+
+<script src="loader.js"></script>
+<script src="indeex.js"></script>
+</body>
+</html>

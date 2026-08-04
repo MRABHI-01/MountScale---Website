@@ -1,0 +1,422 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Products — MountScale</title>
+<meta name="description" content="MountSAS: Automation Sales System for dealership sales teams. Manage leads, pipelines, inventory and service — all from one intelligent dashboard." />
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="index.css">
+<link rel="stylesheet" href="loader.css">
+<link rel="stylesheet" href="products.css">
+</head>
+<body>
+<div id="loader">
+  <div class="loader-card">
+    <div class="loader-mark">
+      <div class="loader-mark-depth"><img src="mountscale-mark.png" alt=""></div>
+      <img class="loader-mark-base" src="mountscale-mark.png" alt="">
+      <div class="loader-mark-fill"><img src="mountscale-mark.png" alt=""></div>
+    </div>
+  </div>
+</div>
+
+<header class="nav" id="navbar">
+  <a href="index.html" class="nav-logo"><img src="mountscale-logo.png" alt="MountScale"/></a>
+  <nav class="nav-center">
+    <a href="index.html#home">Home</a>
+    <a href="products.html" class="active">Products</a>
+    <a href="pricing.html">Pricing</a>
+    <a href="about.html">About Us</a>
+  </nav>
+  <a href="get-started.html" class="nav-cta">Get Started
+    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+  </a>
+</header>
+
+<!-- ================= Products hero ================= -->
+<section class="products-hero">
+  <div class="products-hero-glow"></div>
+  <div class="section-inner products-hero-inner">
+    <h1 class="products-headline reveal">The Solution for <span class="grad">Scaling Your Sales.</span></h1>
+    <p class="products-sub reveal">Help your sales team <strong>Prepare, Connect, and Close</strong> — with one intelligent platform built for dealerships.</p>
+  </div>
+</section>
+<!-- ================= /products hero ================= -->
+
+<!-- ================= Product showcase ================= -->
+<section class="products-showcase">
+  <div class="section-inner">
+
+    <!-- ================= MountSAS — Automation SAS ================= -->
+    <div class="product-block" id="automation-sas">
+      <div class="product-feature-card reveal">
+        <div class="pf-head">
+          <div class="pf-head-left">
+            <div class="pf-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="8.5"/><circle cx="12" cy="12" r="2.4"/><path d="M12 3.5v4.3M5.2 16.5l3.6-2M18.8 16.5l-3.6-2"/></svg>
+            </div>
+            <div>
+              <div class="pf-title-row"><h3>MountSAS</h3><span class="pf-tag">Automation‑Powered</span></div>
+              <div class="pf-sub">Intelligent dealership relationship management</div>
+            </div>
+          </div>
+          <a href="index.html#get-started" class="btn-primary">Try Free
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="pf-body">
+          <h2>Your sales team's automation co-pilot.</h2>
+          <p>MountSAS replaces manual follow-ups with automation. It scores leads, predicts service due-dates, auto-drafts follow-ups, and gives your team a single intelligent inbox for every customer interaction across call, WhatsApp, and walk-in.</p>
+
+          <div class="pf-showcase" data-showcase>
+
+            <!-- Capability tabs -->
+            <div class="pf-tabs">
+              <div class="pf-tabs-label">Capabilities</div>
+
+              <button type="button" class="pf-tab is-active" data-tab-index="0">
+    <span class="pf-tab-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg>
+    </span>
+    <!-- <span class="pf-tab-image">
+      <img src="images/workflow-automation.jpg" alt="Sales workflow automation">
+    </span> -->
+
+    <span class="pf-tab-text">
+        <strong>Entire Workflow Automation</strong>
+
+        <em>
+            Automates your complete sales journey from lead capture to deal closure.
+        </em>
+    </span>
+</button>
+
+<button type="button" class="pf-tab" data-tab-index="1">
+    <span class="pf-tab-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 8.97 5.7a1.94 1.94 0 0 0 2.06 0L22 7"/></svg>
+    </span>
+
+    <span class="pf-tab-text">
+        <strong>Automated Email</strong>
+
+        <em>
+            Creates and sends personalized emails automatically.
+        </em>
+    </span>
+</button>
+
+<button type="button" class="pf-tab" data-tab-index="2">
+    <span class="pf-tab-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 8v4l3 3m6-3a9 9 0 1 1-18 0 9 9 0 0 1 18 0z"/></svg>
+    </span>
+
+    <span class="pf-tab-text">
+        <strong>Auto Reminder</strong>
+
+        <em>
+            Intelligent reminders ensure no customer is ever forgotten.
+        </em>
+    </span>
+</button>
+
+<button type="button" class="pf-tab" data-tab-index="3">
+    <span class="pf-tab-icon">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V4a2 2 0 0 0-2-2zM9 18H7v-4h2v4zm4-4h-2v4h2v-4zm4 4h-2v-4h2v4z"/></svg>
+    </span>
+
+    <span class="pf-tab-text">
+        <strong>Product Material</strong>
+
+        <em>
+            Share brochures, quotations and presentations instantly.
+        </em>
+    </span>
+</button>
+            </div>
+
+            <div class="pf-panel">
+  <div class="pf-panel-image">
+    <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+         alt="Sales workflow automation dashboard" data-panel-image>
+  </div>
+
+  <div class="pf-panel-text">
+    <h3 data-panel-title>Complete Sales Automation.</h3>
+    <p data-panel-desc>MountSAS automates lead assignment, CRM updates, meeting scheduling, follow-ups and every repetitive sales activity so your team spends more time selling.</p>
+    <div class="pf-panel-tags" data-panel-tags>
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>Lead Assignment</span>
+      <span><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>CRM Updates</span>
+    </div>
+  </div>
+</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    <!-- ================= /MountSAS ================= -->
+
+    <!-- ================= MountBot — AI Chatbot (kept ready, currently disabled) ================= -->
+    <!-- <div class="product-block" id="ai-chatbot">
+      <div class="product-feature-card pf-bot reveal">
+        <div class="pf-head">
+          <div class="pf-head-left">
+            <div class="pf-icon">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4M8 16v0M16 16v0"/></svg>
+            </div>
+            <div>
+              <div class="pf-title-row"><h3>MountBot</h3><span class="pf-tag">LLM‑Powered</span></div>
+              <div class="pf-sub">Conversational AI for automotive sales and service</div>
+            </div>
+          </div>
+          <a href="index.html#get-started" class="btn-primary">Try Free
+            <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+          </a>
+        </div>
+
+        <div class="pf-body">
+          <h2>A support agent that never clocks out.</h2>
+          <p>MountBot is trained on your dealership's inventory, offers, and service policies — and handles customer queries instantly, in 12+ Indian languages, across every channel. It resolves 70%+ of queries without any human involvement.</p>
+
+          <div class="pf-feature-grid">
+            <div class="pf-card">
+              <div class="pf-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg></div>
+              <h4>Custom Trained</h4>
+              <p>Upload your inventory, offers, and FAQs — the bot learns your dealership in minutes.</p>
+            </div>
+            <div class="pf-card">
+              <div class="pf-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg></div>
+              <h4>Multilingual</h4>
+              <p>Responds fluently in Hindi, Tamil, Telugu, Bengali, and 10 more Indian languages.</p>
+            </div>
+            <div class="pf-card">
+              <div class="pf-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M13 2 3 14h9l-1 8 10-12h-9l1-8z"/></svg></div>
+              <h4>Smart Escalation</h4>
+              <p>Detects a frustrated or high-intent customer and routes to a sales rep with full context.</p>
+            </div>
+            <div class="pf-card">
+              <div class="pf-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg></div>
+              <h4>Every Channel</h4>
+              <p>One bot — website, WhatsApp, Instagram DMs, and your dealership's mobile app.</p>
+            </div>
+            <div class="pf-card">
+              <div class="pf-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 20V10M12 20V4M6 20v-6"/></svg></div>
+              <h4>Conversation Analytics</h4>
+              <p>Resolution rate, CSAT, and drop-off points surfaced automatically.</p>
+            </div>
+            <div class="pf-card">
+              <div class="pf-card-icon"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg></div>
+              <h4>No-Hallucination Mode</h4>
+              <p>Strict grounding — the bot only answers from your approved inventory and policy data.</p>
+            </div>
+          </div>
+
+          <div class="chat-mock">
+            <div class="chat-head">
+              <div class="chat-head-left">
+                <div class="dot-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="11" width="18" height="10" rx="2"/><circle cx="12" cy="5" r="2"/><path d="M12 7v4"/></svg></div>
+                MountBot
+              </div>
+              <div class="chat-status"><span class="dot"></span> Online</div>
+            </div>
+            <div class="chat-body">
+              <div class="msg user">Hi! I wanted to check test drive slots for the Model X this weekend.</div>
+              <div class="msg bot">You're in luck — Saturday 11 AM and 4 PM are open at our Andheri showroom. Shall I book one for you? 🚗</div>
+              <div class="msg user">Yes, 4 PM works!</div>
+              <div class="msg bot">Booked! You'll get a confirmation on WhatsApp shortly. See you Saturday 👋</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div> -->
+    <!-- ================= /MountBot ================= -->
+
+    <!-- <div class="products-includes reveal">
+      <h3>Every Plan Also Includes</h3>
+      <ul class="includes-grid">
+        <li>Accessibility</li>
+        <li>Dashboard &amp; reporting</li>
+        <li>Calendar integration</li>
+        <li>Gmail or Outlook API</li>
+        <li>Google Meet or Zoom Meet API</li>
+        <li>Industry insights</li>
+        <li>Business card scanner</li>
+        <li>AI meeting summary</li>
+        <li>AI follow-up recommendations</li>
+        <li>AI sales coach</li>
+      </ul>
+    </div> -->
+  </div>
+</section>
+<!-- ================= /product showcase ================= -->
+
+<!-- ================= See pricing ================= -->
+<section class="products-pricing-cta">
+  <div class="section-inner">
+    <a href="pricing.html" class="nav-cta">See pricing
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+  </div>
+</section>
+<!-- ================= /see pricing ================= -->
+
+<footer id="about">
+  <div class="footer-watermark" aria-hidden="true"><img src="mountscale-logo.png" alt=""/></div>
+  <div class="footer-inner">
+    <div class="footer-social">
+      <h4>Find Us</h4>
+      <div class="social-row">
+        <a href="https://x.com/mountscale" target="_blank" rel="noopener" aria-label="Twitter">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor"><path d="M18.9 2H22l-6.77 7.74L23.2 22h-6.24l-4.89-6.39L6.48 22H3.36l7.24-8.28L2.94 2h6.4l4.42 5.84L18.9 2Zm-1.1 18h1.73L8.4 3.9H6.54L17.8 20Z"/></svg>
+        </a>
+        <a href="https://linkedin.com/company/mountscale" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
+        </a>
+        <a href="https://instagram.com/mountscale" target="_blank" rel="noopener" aria-label="Instagram">
+          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1"/></svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="footer-links">
+      <h4>Quick Links</h4>
+      <a href="index.html#home">Home</a>
+      <a href="products.html">Products</a>
+      <a href="pricing.html">Pricing</a>
+      <a href="about.html">About Us</a>
+    </div>
+
+    <div class="footer-contact">
+      <h4>Contact Us</h4>
+      <div class="contact-row">
+        <span class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+        </span>
+        <p>+91 63668 67327</p>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/></svg>
+        </span>
+        <p>bharatkumarachary25@gmail.com</p>
+      </div>
+      <div class="contact-row">
+        <span class="contact-icon">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0z"/><circle cx="12" cy="10" r="3"/></svg>
+        </span>
+        <p>Plot - 695, Sikharchandi Nagar, Bhubaneswar, Odisha, 751024</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- <div class="footer-tagline-row">Scaling Without Limits</div> -->
+
+  <div class="footer-bottom">© 2026 MountScale. All rights reserved.</div>
+</footer>
+
+<script src="loader.js"></script>
+<script>
+  // Hide the loading splash as soon as this page is ready —
+  // self-contained, doesn't depend on any homepage-only script.
+  // window.addEventListener('DOMContentLoaded', () => {
+    
+  // });
+
+  // ---- Product showcase: capability tabs ----
+  const pfData = [
+
+{
+title:"Complete Sales Automation",
+desc:"MountSAS automates lead assignment, CRM updates, meeting scheduling, follow-ups and every repetitive sales activity so your team spends more time selling.",
+tags:["Lead Assignment","CRM Updates"],
+image:"https://images.unsplash.com/photo-1551288049-bebda4e38f71?auto=format&fit=crop&w=1000&q=80"
+},
+{
+title:"Email Automation",
+desc:"Automatically generate personalized emails, nurture sequences and follow-up messages based on every customer interaction.",
+tags:["Personalized Emails","Auto Follow-ups"],
+image:"https://images.unsplash.com/photo-1603791440384-56cd371ee9a7?auto=format&fit=crop&w=1000&q=80"
+},
+{
+title:"Never Miss A Follow-up",
+desc:"Smart reminders notify your sales team at exactly the right moment so every opportunity receives timely attention.",
+tags:["Smart Notifications","Scheduled Reminders"],
+image:"https://images.unsplash.com/photo-1766555766657-ea8f81a67934?auto=format&fit=crop&w=1000&q=80"
+},
+{
+title:"Product Material Instantly",
+desc:"Share brochures, quotations, presentations, pricing sheets and product documents with one click from inside MountSAS.",
+tags:["Brochures","Sales Documents"],
+image:"https://images.unsplash.com/photo-1599658880436-c61792e70672?auto=format&fit=crop&w=1000&q=80"
+}
+
+];
+
+  document.querySelectorAll('[data-showcase]').forEach(showcase => {
+    const tabs = showcase.querySelectorAll('.pf-tab');
+    const tiles = showcase.querySelectorAll('.pf-tile');
+    const titleEl = showcase.querySelector('[data-panel-title]');
+    const descEl = showcase.querySelector('[data-panel-desc]');
+    const tagsEl = showcase.querySelector('[data-panel-tags]');
+    const checkSvg = '<svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="3"><path d="M20 6 9 17l-5-5"/></svg>';
+    const imgEl = showcase.querySelector('[data-panel-image]');
+
+    tabs.forEach(tab => {
+      tab.addEventListener('click', () => {
+        const i = Number(tab.dataset.tabIndex);
+        const d = pfData[i];
+        if (!d) return;
+
+        tabs.forEach(t => { t.classList.remove('is-active'); t.setAttribute('aria-pressed', 'false'); });
+        tab.classList.add('is-active');
+        tab.setAttribute('aria-pressed', 'true');
+
+        tiles.forEach(t => t.classList.toggle('is-active', Number(t.dataset.tileIndex) === i));
+
+        titleEl.textContent = d.title;
+        descEl.textContent = d.desc;
+        tagsEl.innerHTML = d.tags.map(tag => `<span>${checkSvg}${tag}</span>`).join('');
+        if (imgEl) imgEl.src = d.image;
+      });
+    });
+  });
+
+  const navbar = document.getElementById('navbar');
+  let lastY = window.scrollY;
+  window.addEventListener('scroll', () => {
+    const y = window.scrollY;
+    if (y > lastY && y > 140) navbar.classList.add('hide');
+    else navbar.classList.remove('hide');
+    navbar.classList.toggle('scrolled', y > 40);
+    lastY = y;
+  }, {passive:true});
+
+  // Reveal animations are progressive enhancement only — if GSAP/ScrollTrigger
+  // fail to load (blocked CDN, offline, etc.) content still shows normally.
+  if (window.gsap && window.ScrollTrigger) {
+    gsap.registerPlugin(ScrollTrigger);
+
+    gsap.utils.toArray('.reveal').forEach(el => {
+      gsap.fromTo(el,
+        { opacity: 0, y: 40 },
+        {
+          scrollTrigger: {trigger: el, start: 'top 88%'},
+          opacity: 1, y: 0, duration: 0.8, ease: 'power3.out'
+        }
+      );
+    });
+
+    gsap.utils.toArray('.pf-tabs').forEach(list => {
+      gsap.from(list.querySelectorAll('.pf-tab'), {
+        scrollTrigger: {trigger: list, start: 'top 85%'},
+        opacity: 0, x: -16, duration: 0.6, stagger: 0.06, ease: 'power3.out'
+      });
+    });
+  }
+</script>
+
+</body>
+</html>
