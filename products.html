@@ -25,16 +25,22 @@
 
 <header class="nav" id="navbar">
   <a href="index.html" class="nav-logo"><img src="mountscale-logo.png" alt="MountScale"/></a>
-  <nav class="nav-center">
+  <nav class="nav-center" id="navCenter">
     <a href="index.html#home">Home</a>
-    <a href="products.html" class="active">Products</a>
+    <a href="products.html">Products</a>
     <a href="pricing.html">Pricing</a>
     <a href="about.html">About Us</a>
   </nav>
-  <a href="get-started.html" class="nav-cta">Get Started
-    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
-  </a>
+  <div class="nav-right">
+    <a href="get-started.html" class="nav-cta">Get Started
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+    </a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="navCenter">
+      <span></span>
+    </button>
+  </div>
 </header>
+<div class="nav-scrim" id="navScrim"></div>
 
 <!-- ================= Products hero ================= -->
 <section class="products-hero">
@@ -318,6 +324,7 @@
 </footer>
 
 <script src="loader.js"></script>
+<script src="nav.js"></script>
 <script>
   // Hide the loading splash as soon as this page is ready —
   // self-contained, doesn't depend on any homepage-only script.
