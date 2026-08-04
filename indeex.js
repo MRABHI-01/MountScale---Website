@@ -359,35 +359,6 @@ gsap.utils.toArray('.flow-row').forEach(row => {
   });
 });
 
-/* ---------------- Workflow slider (steps 1-4 / 5-8, arrow-driven) ---------------- */
-(function workflowSlider(){
-  const track = document.getElementById('flowTrack');
-  const prevBtn = document.getElementById('flowPrev');
-  const nextBtn = document.getElementById('flowNext');
-  const dots = [document.getElementById('flowDot0'), document.getElementById('flowDot1')];
-  if (!track || !prevBtn || !nextBtn) return;
-
-  const pages = track.querySelectorAll('.flow-row').length; // 2
-  let current = 0;
-
-  function render(){
-    track.style.transform = `translateX(-${current * (100 / pages)}%)`;
-    prevBtn.disabled = current === 0;
-    nextBtn.disabled = current === pages - 1;
-    dots.forEach((d, i) => { if (d) d.classList.toggle('active', i === current); });
-  }
-
-  function goTo(index){
-    current = Math.max(0, Math.min(pages - 1, index));
-    render();
-  }
-
-  nextBtn.addEventListener('click', () => goTo(current + 1));
-  prevBtn.addEventListener('click', () => goTo(current - 1));
-  dots.forEach((d, i) => d && d.addEventListener('click', () => goTo(i)));
-
-  render();
-})();
 
 // Engine section: mountain peak badges float in, root items stagger up
 gsap.set('.peak-badge', {opacity: 0, x: 24});
