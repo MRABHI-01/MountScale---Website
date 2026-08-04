@@ -191,8 +191,8 @@ h1.hero-headline .grad{
   padding:18px 28px 17px;
   font-size:clamp(1rem,1.6vw,1.18rem);line-height:1.65;
   color:#0f172a;font-weight:500;letter-spacing:.005em;
-  background:linear-gradient(135deg,rgba(255,255,255,.11),rgba(234,244,255,.11));
-  border:1px solid rgba(255,255,255,.11);border-radius:20px;
+  background:linear-gradient(135deg,rgba(255,255,255,.55),rgba(234,244,255,.5));
+  border:1px solid rgba(255,255,255,.4);border-radius:20px;
   box-shadow:0 18px 44px -20px rgba(15,23,42,.42);
   backdrop-filter:blur(14px) saturate(145%);
   -webkit-backdrop-filter:blur(14px) saturate(145%);
