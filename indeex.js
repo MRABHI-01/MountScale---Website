@@ -76,17 +76,9 @@ gsap.registerPlugin(ScrollTrigger);
 })();
 
 /* ---------------- Loader ---------------- */
-window.addEventListener('load', () => {
-  gsap.to('#loader', {
-    opacity: 0, duration: 0.7, delay: 0.4, ease: 'power2.out',
-    onComplete: () => { document.getElementById('loader').style.display = 'none'; runPageLoadSequence(); }
-  });
-});
-// safety fallback
-setTimeout(() => {
-  const l = document.getElementById('loader');
-  if (l && l.style.display !== 'none') { l.style.display = 'none'; runPageLoadSequence(); }
-}, 2500);
+window.addEventListener('mountscale:loaded', runPageLoadSequence, { once: true });
+// safety fallback, in case loader.js's own failsafe or event never fires
+setTimeout(runPageLoadSequence, 3000);
 
 let pageLoadRan = false;
 function runPageLoadSequence(){
