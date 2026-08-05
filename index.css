@@ -651,7 +651,7 @@ footer .footer-watermark img{width:100%;display:block;}
 .challenge-quote p{font-size:.92rem;font-style:italic;line-height:1.6;color:var(--text);}
 
 
-#industries{padding:80px 24px 40px;background:var(--bg);}
+#industries{padding:80px 24px 60px;background:var(--bg);}
 
 .industries-marquee{
   margin-top:44px;overflow:hidden;position:relative;
