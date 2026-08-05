@@ -152,19 +152,19 @@
 .msw-step:nth-child(7){grid-column:2;}
 .msw-step:nth-child(8){grid-column:1;}
 
-/* connectors between box edges, row 1 (1-2-3-4) */
+/* connectors: box center to box center, row 1 (1-2-3-4) */
 .msw-step:nth-child(1)::before,
 .msw-step:nth-child(2)::before,
 .msw-step:nth-child(3)::before,
-/* connectors between box edges, row 2 (8-7-6-5) */
+/* connectors: box center to box center, row 2 (8-7-6-5) */
 .msw-step:nth-child(6)::before,
 .msw-step:nth-child(7)::before,
 .msw-step:nth-child(8)::before{
   content:'';position:absolute;
-  top:88px;right:0;
-  width:24px;height:3px;
+  top:50%;left:50%;transform:translateY(-50%);
+  width:calc(100% + 24px);height:3px;
   background:var(--blue);opacity:.35;
-  z-index:1;
+  z-index:0;
 }
 
 /* vertical connector: 4 down to 5 */
@@ -187,6 +187,7 @@
   box-shadow:0 16px 36px -22px rgba(37,99,235,.3);
   display:flex;flex-direction:column;align-items:center;
   transition:transform .35s var(--ease), box-shadow .35s var(--ease);
+  z-index:1;
 }
 .msw-card:hover{transform:translateY(-4px);box-shadow:0 22px 44px -20px rgba(37,99,235,.4);}
 .msw-icon{
