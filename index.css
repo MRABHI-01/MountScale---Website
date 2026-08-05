@@ -57,9 +57,9 @@ header.nav.scrolled{
 header.nav.hide{transform:translateY(-120%);}
 
 .nav-logo{display:flex;align-items:center;gap:10px;}
-.nav-logo img{height:280px;width:auto;transition:height .4s ease;}
+.nav-logo img{height:260px;width:auto;transition:height .4s ease;}
 .nav-logo img, .footer-brand img{content:url("mountscale-logo.png");}
-header.nav.scrolled .nav-logo img{height:280px;}
+header.nav.scrolled .nav-logo img{height:260px;}
 
 .nav-center {
   display: flex;
@@ -127,8 +127,8 @@ header.nav.scrolled .nav-center a{
 .nav-scrim.is-open{display:block;}
 
 @media (max-width:900px){
-  .nav-logo img{height:52px;}
-  header.nav.scrolled .nav-logo img{height:46px;}
+  .nav-logo img{height:80px;}
+  header.nav.scrolled .nav-logo img{height:80px;}
 
   .nav-center{
     display:flex;flex-direction:column;align-items:flex-start;gap:26px;
@@ -187,7 +187,7 @@ header.nav.scrolled .nav-center a{
 h1.hero-headline{
   font-size:clamp(2.4rem,5.6vw,4.4rem);
   line-height:1.06;font-weight:700;letter-spacing:-0.035em;
-  color:var(--text);
+  color:white;
 }
 h1.hero-headline .grad{
   color:#0055EC;
@@ -592,7 +592,7 @@ footer .footer-watermark img{width:100%;display:block;}
 
 
 #challenges{
-  padding:90px 24px;
+  padding:40px 24px 90px;
   background:#fff;
 }
 
@@ -651,7 +651,7 @@ footer .footer-watermark img{width:100%;display:block;}
 .challenge-quote p{font-size:.92rem;font-style:italic;line-height:1.6;color:var(--text);}
 
 
-#industries{padding:80px 24px 90px;background:var(--bg);}
+#industries{padding:80px 24px 40px;background:var(--bg);}
 
 .industries-marquee{
   margin-top:44px;overflow:hidden;position:relative;
