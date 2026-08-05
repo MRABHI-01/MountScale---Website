@@ -152,17 +152,17 @@
 .msw-step:nth-child(7){grid-column:2;}
 .msw-step:nth-child(8){grid-column:1;}
 
-/* full horizontal connectors: row 1 (1-2-3-4) */
+/* connectors between box edges, row 1 (1-2-3-4) */
 .msw-step:nth-child(1)::before,
 .msw-step:nth-child(2)::before,
 .msw-step:nth-child(3)::before,
-/* full horizontal connectors: row 2 (8-7-6-5) */
+/* connectors between box edges, row 2 (8-7-6-5) */
 .msw-step:nth-child(6)::before,
 .msw-step:nth-child(7)::before,
 .msw-step:nth-child(8)::before{
   content:'';position:absolute;
-  top:22px;left:50%;
-  width:calc(100% + 24px);height:3px;
+  top:88px;right:0;
+  width:24px;height:3px;
   background:var(--blue);opacity:.35;
   z-index:1;
 }
