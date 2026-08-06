@@ -127,8 +127,8 @@ header.nav.scrolled .nav-center a{
 .nav-scrim.is-open{display:block;}
 
 @media (max-width:900px){
-  .nav-logo img{height:140px;}
-  header.nav.scrolled .nav-logo img{height:140px;}
+  .nav-logo img{height:200px;}
+  header.nav.scrolled .nav-logo img{height:200px;}
 
   .nav-center{
     display:flex;flex-direction:column;align-items:flex-start;gap:26px;
