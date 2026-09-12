@@ -229,7 +229,7 @@
     </div>
 
     <div class="team-grid">
-      <div class="team-card reveal">
+      <!-- <div class="team-card reveal">
         <img class="team-photo" src="CEO.jpeg" alt="Bharat Kumar, CEO & Co-founder">
         <div class="team-name">Bharat Kumar</div>
         <span class="team-role-pill">CEO &amp; Co-founder</span>
@@ -238,7 +238,7 @@
           <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/><rect x="2" y="9" width="4" height="12"/><circle cx="4" cy="4" r="2"/></svg>
           Connect on LinkedIn
         </a>
-      </div>
+      </div> -->
 
       <div class="team-card reveal">
         <img class="team-photo" src="CTO.jpeg" alt="Bhumika Achary, CTO & Co-founder">
@@ -276,7 +276,96 @@
   </div>
 </section>
 <!-- ================= /leadership team ================= -->
- 
+
+<!-- ================= Careers ================= -->
+<section class="about-careers" id="careers">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <h2>Come Build The Climb With Us</h2>
+      <p>We're a small team moving fast. If you'd rather build the tools than just use them, tell us where you'd fit.</p>
+    </div>
+
+    <div class="careers-wrap">
+      <div class="careers-roles reveal">
+        <div class="role-card">
+          <h4>Frontend Developer Intern</h4>
+          <span class="role-meta">Bhubaneswar &middot; Internship</span>
+          <p>Turn designs into fast, accessible interfaces across the MountScale product.</p>
+        </div>
+        <div class="role-card">
+          <h4>Backend Engineer</h4>
+          <span class="role-meta">Bhubaneswar &middot; Full-time</span>
+          <p>Design and scale the APIs and data models behind our CRM.</p>
+        </div>
+        <div class="role-card">
+          <h4>Product Designer</h4>
+          <span class="role-meta">Remote &middot; Full-time</span>
+          <p>Shape how growing businesses experience automation, end to end.</p>
+        </div>
+        <div class="role-card role-card-open">
+          <h4>Don't see your role?</h4>
+          <span class="role-meta">Open application</span>
+          <p>Tell us what you're good at — we'll reach out when it fits.</p>
+        </div>
+      </div>
+
+      <form class="careers-form reveal" id="careersForm" action="https://formsubmit.co/contact@mountscale.in" method="POST">
+        <div class="form-row">
+          <div class="form-field">
+            <label for="careerName">Full name</label>
+            <input type="text" id="careerName" name="name" required placeholder="Your full name" autocomplete="name">
+          </div>
+          <div class="form-field">
+            <label for="careerEmail">Email</label>
+            <input type="email" id="careerEmail" name="email" required placeholder="you@example.com" autocomplete="email">
+          </div>
+        </div>
+
+        <div class="form-row">
+          <div class="form-field">
+            <label for="careerPosition">Position</label>
+            <select id="careerPosition" name="position" required>
+              <option value="" disabled selected>Select a position</option>
+              <option>Frontend Developer Intern</option>
+              <option>Backend Engineer</option>
+              <option>Product Designer</option>
+              <option>Open application</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="careerPhone">Phone <span class="field-optional">(optional)</span></label>
+            <input type="tel" id="careerPhone" name="phone" placeholder="+91 00000 00000" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="form-field">
+          <label for="careerResume">Resume / portfolio link</label>
+          <input type="url" id="careerResume" name="resume_link" placeholder="https://" required>
+        </div>
+
+        <div class="form-field">
+          <label for="careerMessage">Why MountScale? <span class="field-optional">(optional)</span></label>
+          <textarea id="careerMessage" name="message" rows="4" placeholder="A few lines about you and why this role fits."></textarea>
+        </div>
+
+        <!-- FormSubmit.co config: routes this form straight to contact@mountscale.in with no backend of our own.
+             First submission triggers a one-time confirmation email to contact@mountscale.in — click it once to activate. -->
+        <input type="hidden" name="_subject" value="New career application — MountScale">
+        <input type="hidden" name="_template" value="table">
+        <input type="hidden" name="_captcha" value="false">
+        <input type="text" name="_honey" class="hp-field" tabindex="-1" autocomplete="off" aria-hidden="true">
+
+        <button type="submit" class="career-submit" id="careerSubmitBtn">
+          <span class="career-submit-label">Submit application</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </button>
+        <p class="career-form-status" id="careerFormStatus" role="status" aria-live="polite"></p>
+      </form>
+    </div>
+  </div>
+</section>
+<!-- ================= /Careers ================= -->
+
 <footer id="about">
   <div class="footer-watermark" aria-hidden="true"><img src="mountscale-logo.png" alt=""/></div>
   <div class="footer-inner">
