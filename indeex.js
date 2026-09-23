@@ -387,20 +387,6 @@ document.querySelectorAll('[data-count]').forEach(el => {
   });
 });
 
-const chaVisualImg = document.getElementById('chaVisualImg');
-const chaQuoteText = document.getElementById('chaQuoteText');
-document.querySelectorAll('.cha-item').forEach((item) => {
-  item.querySelector('.cha-head').addEventListener('click', () => {
-    const alreadyActive = item.classList.contains('is-active');
-    document.querySelectorAll('.cha-item').forEach((i) => i.classList.remove('is-active'));
-    if (!alreadyActive) {
-      item.classList.add('is-active');
-      if (chaVisualImg && item.dataset.img) chaVisualImg.src = item.dataset.img;
-      if (chaQuoteText && item.dataset.quote) chaQuoteText.textContent = `"${item.dataset.quote}"`;
-    }
-  });
-});
-
 // Footer fade-up
 gsap.to('footer .footer-inner > *', {
   scrollTrigger: { trigger: 'footer', start: 'top 90%' },

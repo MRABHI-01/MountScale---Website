@@ -47,7 +47,7 @@ revealItems.forEach(el => revealObserver.observe(el));
 /* ---------------- Careers application form ---------------- */
 // Submits to FormSubmit.co over AJAX so the applicant stays on the page.
 // No backend of our own: FormSubmit relays the POST straight to
-// contact@mountscale.in. Note — the very first submission after this
+// mountscalehr@gmail.com. Note — the very first submission after this
 // form goes live triggers a one-time confirmation email to that inbox;
 // someone needs to click the confirmation link once before submissions
 // start arriving automatically.
@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
       })
       .catch(() => {
         if (statusEl) {
-          statusEl.textContent = "Something went wrong sending that. Please email us directly at contact@mountscale.in.";
+          statusEl.textContent = "Something went wrong sending that. Please email us directly at mountscalehr@gmail.com.";
           statusEl.setAttribute('data-state', 'error');
         }
       })

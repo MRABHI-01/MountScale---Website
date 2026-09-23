@@ -28,7 +28,7 @@
   <a href="index.html" class="nav-logo"><img src="mountscale-logo.png" alt="MountScale"/></a>
   <nav class="nav-center" id="navCenter">
     <a href="index.html#home">Home</a>
-    <a href="products.html">Products</a>
+    <a href="products.html" class="active">Products</a>
     <a href="pricing.html">Pricing</a>
     <a href="career.html">Career</a>
     <a href="about.html">About Us</a>
@@ -44,15 +44,210 @@
 </header>
 <div class="nav-scrim" id="navScrim"></div>
 
-<!-- ================= Products hero ================= -->
-<section class="products-hero">
-  <div class="products-hero-glow"></div>
-  <div class="section-inner products-hero-inner">
-    <h1 class="products-headline reveal">The Solution for <span class="grad">Scaling Your Sales.</span></h1>
-    <p class="products-sub reveal">Help your sales team <strong>Prepare, Connect, and Close</strong> — with one intelligent platform built for dealerships.</p>
+<!-- ================= Products hero (split: copy + live platform mockup) ================= -->
+<section class="ph-hero">
+  <div class="ph-hero-glow"></div>
+  <div class="section-inner ph-hero-inner">
+
+    <div class="ph-copy">
+      <!-- <span class="ph-kicker reveal"><span class="ph-kicker-dot"></span>MountSAS &middot; Sales Automation System</span> -->
+      <h1 class="ph-headline reveal">The all-in-one platform for <span class="grad">sales automation.</span></h1>
+      <p class="ph-sub reveal">MountSAS takes over the repetitive work behind your sales process — lead assignment, follow-ups, CRM updates, meetings and deal tracking — so your team spends its time talking to customers and closing deals.</p>
+      <div class="ph-ctas reveal">
+        <a href="get-started.html" class="btn-primary">Book a demo
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M13 5l7 7-7 7"/></svg>
+        </a>
+        <a href="#automation-sas" class="btn-secondary">Explore the platform</a>
+      </div>
+      <ul class="ph-points reveal">
+        <li>Auto lead assignment</li>
+        <li>Smart follow-ups</li>
+        <li>Live pipeline</li>
+      </ul>
+    </div>
+
+    <!-- Right: platform mockup built in HTML/CSS (no image needed) -->
+    <div class="ph-visual reveal" aria-hidden="true">
+      <div class="ph-device">
+        <div class="ph-screen">
+          <div class="ph-bar"><i></i><i></i><i></i><span>MountSAS &mdash; Dashboard</span></div>
+          <div class="ph-app">
+            <div class="ph-side">
+              <b class="on"></b><b></b><b></b><b></b><b></b>
+            </div>
+            <div class="ph-main">
+              <div class="ph-kpis">
+                <div class="ph-kpi"><em>New leads</em><strong>1,248</strong><span class="up">+12%</span></div>
+                <div class="ph-kpi"><em>Follow-ups due</em><strong>36</strong><span>today</span></div>
+                <div class="ph-kpi"><em>Deals won</em><strong>84</strong><span class="up">+9%</span></div>
+              </div>
+              <div class="ph-chart">
+                <span style="--h:38%"></span><span style="--h:52%"></span><span style="--h:44%"></span><span style="--h:66%"></span><span style="--h:58%"></span><span style="--h:74%"></span><span style="--h:69%"></span><span style="--h:88%"></span><span style="--h:80%"></span><span style="--h:96%"></span>
+              </div>
+              <div class="ph-rows">
+                <div class="ph-row"><i class="ok"></i><span>Lead assigned to Priya</span><b>Auto</b></div>
+                <div class="ph-row"><i class="ok"></i><span>Follow-up email sent</span><b>Auto</b></div>
+                <div class="ph-row"><i class="warn"></i><span>Meeting booked &mdash; Tue 11:00</span><b>Synced</b></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="ph-base"></div>
+
+      <div class="ph-float ph-f1">
+        <span class="ph-f-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="4" width="20" height="16" rx="2"/><path d="m2 7 8.97 5.7a1.94 1.94 0 0 0 2.06 0L22 7"/></svg></span>
+        <span><strong>Email sent</strong><em>to Rohan Mehta</em></span>
+      </div>
+      <div class="ph-float ph-f2">
+        <span class="ph-f-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="4" width="18" height="18" rx="2"/><path d="M16 2v4M8 2v4M3 10h18"/></svg></span>
+        <span><strong>Meeting booked</strong><em>Tomorrow, 11:00 AM</em></span>
+      </div>
+      <div class="ph-float ph-f3">
+        <span class="ph-f-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="7" r="4"/><path d="M2 21v-2a4 4 0 0 1 4-4h4a4 4 0 0 1 4 4v2"/><path d="m17 11 2 2 4-4"/></svg></span>
+        <span><strong>Lead assigned</strong><em>Priya Sharma</em></span>
+      </div>
+      <div class="ph-float ph-f4">
+        <span class="ph-f-icon"><svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 8a6 6 0 0 0-12 0c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.73 21a2 2 0 0 1-3.46 0"/></svg></span>
+        <span><strong>Reminder</strong><em>Call Ankit at 4 PM</em></span>
+      </div>
+    </div>
+
   </div>
 </section>
 <!-- ================= /products hero ================= -->
+
+<!-- ================= Sales pain points (sticky list + illustrated panels) ================= -->
+<section class="pain-section" id="pain-points">
+  <div class="section-inner">
+    <div class="section-head reveal">
+      <h2>Where sales teams <span class="grad">lose deals</span></h2>
+      <p>Most deals aren't lost to competitors. They slip away inside your own process.</p>
+    </div>
+
+    <div class="pain-layout">
+
+      <!-- Left: sticky challenge list -->
+      <aside class="pain-nav">
+        <div class="pain-nav-title">The sales challenges you face</div>
+        <button type="button" class="pain-link is-active" data-target="pain-leads">
+          <span class="pain-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+          <span class="pain-link-text"><strong>Leads falling through</strong><em>New leads get lost, unassigned or take too long to answer.</em></span>
+        </button>
+        <button type="button" class="pain-link" data-target="pain-followups">
+          <span class="pain-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+          <span class="pain-link-text"><strong>Missed follow-ups</strong><em>Promising prospects go cold because someone forgot.</em></span>
+        </button>
+        <button type="button" class="pain-link" data-target="pain-manual">
+          <span class="pain-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span>
+          <span class="pain-link-text"><strong>Too much manual work</strong><em>Emails, CRM updates and scheduling slow your team down.</em></span>
+        </button>
+        <button type="button" class="pain-link" data-target="pain-visibility">
+          <span class="pain-link-icon"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+          <span class="pain-link-text"><strong>No sales visibility</strong><em>Hard to tell what's happening across your pipeline.</em></span>
+        </button>
+      </aside>
+
+      <!-- Right: illustrated panels -->
+      <div class="pain-panels">
+
+        <!-- 1. Leads falling through -->
+        <article class="pain-panel" id="pain-leads">
+          <div class="pain-copy">
+            <span class="pain-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87M16 3.13a4 4 0 0 1 0 7.75"/></svg></span>
+            <h3>Leads falling through?</h3>
+            <p>New leads keep coming in, but without the right process they sit unassigned or wait too long for a reply. By the time someone picks them up, the buyer has already spoken to a competitor.</p>
+            <div class="pain-result"><span>The result</span>Lost opportunities and lower revenue.</div>
+          </div>
+          <div class="pain-art art-funnel">
+            <div class="af-cards">
+              <div class="af-card"><i></i><b></b></div>
+              <div class="af-card"><i></i><b></b></div>
+              <div class="af-card"><i></i><b></b></div>
+            </div>
+            <div class="af-funnel"><span></span></div>
+            <div class="af-drop d1"><i></i><b></b></div>
+            <div class="af-drop d2"><i></i><b></b></div>
+            <div class="af-drop d3"><i></i><b></b></div>
+            <div class="af-hole"></div>
+            <div class="art-tag">3 leads unassigned for 48h</div>
+          </div>
+        </article>
+
+        <!-- 2. Missed follow-ups -->
+        <article class="pain-panel" id="pain-followups">
+          <div class="pain-copy">
+            <span class="pain-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg></span>
+            <h3>Missed follow-ups</h3>
+            <p>A prospect asks for a quote, a rep promises to call back, and then the week gets busy. Without reminders, warm conversations quietly go cold.</p>
+            <div class="pain-result"><span>The result</span>Interested buyers walk away.</div>
+          </div>
+          <div class="pain-art art-followup">
+            <div class="afu-list">
+              <div class="afu-row"><i>RM</i><span><strong>Rohan Mehta</strong><em>Follow-up: Mon</em></span><b class="done">Done</b></div>
+              <div class="afu-row"><i>PS</i><span><strong>Priya Sharma</strong><em>Follow-up: Tue</em></span><b class="done">Done</b></div>
+              <div class="afu-row is-late"><i>AV</i><span><strong>Ankit Verma</strong><em>Follow-up: 5 days ago</em></span><b class="late">Missed</b></div>
+            </div>
+            <div class="afu-bubble">
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><circle cx="12" cy="12" r="9"/><path d="M12 8v5M12 16h.01"/></svg>
+              Ankit went quiet
+            </div>
+          </div>
+        </article>
+
+        <!-- 3. Too much manual work -->
+        <article class="pain-panel" id="pain-manual">
+          <div class="pain-copy">
+            <span class="pain-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><path d="M14 2v6h6M16 13H8M16 17H8"/></svg></span>
+            <h3>Too much manual work</h3>
+            <p>Writing emails, updating the CRM, booking meetings, logging calls, preparing reports. Your best sellers spend half their day on admin instead of with customers.</p>
+            <div class="pain-result"><span>The result</span>Less selling time, slower deals.</div>
+          </div>
+          <div class="pain-art art-manual">
+            <div class="am-core">
+              <svg width="26" height="26" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="8" r="4"/><path d="M4 21c0-4.4 3.6-8 8-8s8 3.6 8 8"/></svg>
+              <span>Sales rep</span>
+            </div>
+            <div class="am-chip c1">Updating CRM</div>
+            <div class="am-chip c2">Writing emails</div>
+            <div class="am-chip c3">Scheduling meetings</div>
+            <div class="am-chip c4">Logging calls</div>
+            <div class="am-chip c5">Preparing reports</div>
+            <div class="am-chip c6">Sending quotes</div>
+          </div>
+        </article>
+
+        <!-- 4. No sales visibility -->
+        <article class="pain-panel" id="pain-visibility">
+          <div class="pain-copy">
+            <span class="pain-badge"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M2 12s3.5-7 10-7 10 7 10 7-3.5 7-10 7S2 12 2 12z"/><circle cx="12" cy="12" r="3"/></svg></span>
+            <h3>No sales visibility</h3>
+            <p>Updates live in WhatsApp chats, notebooks and people's heads. Managers can't see which deals are moving, which are stuck, or where to step in.</p>
+            <div class="pain-result"><span>The result</span>Guesswork forecasts and surprise losses.</div>
+          </div>
+          <div class="pain-art art-pipeline">
+            <div class="ap-board">
+              <div class="ap-col"><em>New</em><b></b><b class="blur"></b><b></b></div>
+              <div class="ap-col"><em>Contacted</em><b class="blur"></b><b class="q">?</b></div>
+              <div class="ap-col"><em>Proposal</em><b class="q">?</b><b class="blur"></b></div>
+              <div class="ap-col"><em>Won</em><b class="q">?</b></div>
+            </div>
+            <div class="ap-bubble">Which deals are at risk this week?</div>
+          </div>
+        </article>
+
+      </div>
+    </div>
+
+    <div class="pain-bridge reveal">
+      <p>MountSAS fixes all four — automatically.</p>
+      <a href="#automation-sas" class="btn-primary">See how it works
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+<!-- ================= /Sales pain points ================= -->
 
 <!-- ================= Product showcase ================= -->
 <section class="products-showcase">
@@ -261,6 +456,115 @@
 </section>
 <!-- ================= /product showcase ================= -->
 
+<!-- ================= Industry challenges we solve (moved from home page) ================= -->
+<section id="challenges">
+  <div class="section-inner">
+
+    <div class="section-head reveal">
+      <h2>The Industry challenges<br><span class="grad">We Solve</span></h2>
+      <p>Sales teams spend hours on manual tasks instead of selling.</p>
+    </div>
+
+    <div class="challenge-wrapper">
+
+      <!-- LEFT: accordion -->
+      <div class="challenge-accordion">
+
+        <div class="cha-item is-active" data-index="01"
+             data-img="https://images.unsplash.com/photo-1522071820081-009f0129c71c?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+             data-quote="Less busywork, more selling — MountScale runs the routine so your team doesn't have to.">
+          <button class="cha-head" type="button">
+            <span class="cha-num">01</span>
+            <span class="cha-title">Repetitive Sales Workflows</span>
+            <span class="cha-arrow">↗</span>
+          </button>
+          <div class="cha-body">
+            <ul>
+              <li><strong>Challenge:</strong> Sales teams spend hours on manual tasks instead of selling.</li>
+              <li><strong>How MountScale Solves It:</strong> Automates repetitive sales activities — lead assignment, follow-up reminders, CRM updates, task creation, meeting scheduling and workflow execution — freeing your team to focus on relationships and closing deals.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cha-item" data-index="02"
+             data-img="https://images.unsplash.com/photo-1531973576160-7125cd663d86?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+             data-quote="One workspace. Every tool. No more app-switching chaos.">
+          <button class="cha-head" type="button">
+            <span class="cha-num">02</span>
+            <span class="cha-title">Too Many Tools</span>
+            <span class="cha-arrow">↗</span>
+          </button>
+          <div class="cha-body">
+            <ul>
+              <li><strong>Challenge:</strong> Switching between CRM, email, calendar, spreadsheets and meeting tools slows everyone down.</li>
+              <li><strong>How MountScale Solves It:</strong> Brings your sales ecosystem into one unified platform — emails, calendars, meetings, communication channels and customer data — so your team works from a single workspace instead of juggling apps.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cha-item" data-index="03"
+             data-img="https://images.unsplash.com/photo-1541746972996-4e0b0f43e02a?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+             data-quote="Never let a warm lead go cold again — every follow-up, tracked automatically.">
+          <button class="cha-head" type="button">
+            <span class="cha-num">03</span>
+            <span class="cha-title">Missed Follow-ups</span>
+            <span class="cha-arrow">↗</span>
+          </button>
+          <div class="cha-body">
+            <ul>
+              <li><strong>Challenge:</strong> Promising opportunities are lost because follow-ups are delayed or forgotten.</li>
+              <li><strong>How MountScale Solves It:</strong> Automatically tracks every customer interaction, creates follow-up tasks, sends reminders, and can trigger personalized outreach based on your sales process — so no opportunity is overlooked.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cha-item" data-index="04"
+             data-img="https://images.unsplash.com/photo-1573164574572-cb89e39749b4?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+             data-quote="One customer, one timeline — the full story, always in view.">
+          <button class="cha-head" type="button">
+            <span class="cha-num">04</span>
+            <span class="cha-title">Scattered Customer Data</span>
+            <span class="cha-arrow">↗</span>
+          </button>
+          <div class="cha-body">
+            <ul>
+              <li><strong>Challenge:</strong> Customer data is spread across emails, calls, notes and multiple applications.</li>
+              <li><strong>How MountScale Solves It:</strong> Centralizes customer information into a single timeline — emails, meetings, notes, activities, documents and deal history — giving every stakeholder instant access to the full context.</li>
+            </ul>
+          </div>
+        </div>
+
+        <div class="cha-item" data-index="05"
+             data-img="https://images.unsplash.com/photo-1560264418-c4445382edbc?fm=jpg&q=80&w=1200&auto=format&fit=crop"
+             data-quote="Full pipeline visibility, zero guesswork — see exactly where every deal stands.">
+          <button class="cha-head" type="button">
+            <span class="cha-num">05</span>
+            <span class="cha-title">Poor Pipeline Visibility</span>
+            <span class="cha-arrow">↗</span>
+          </button>
+          <div class="cha-body">
+            <ul>
+              <li><strong>Challenge:</strong> Managers struggle to know which deals are progressing and which are at risk.</li>
+              <li><strong>How MountScale Solves It:</strong> Provides a real-time pipeline with live activity tracking, deal-stage monitoring, performance dashboards and actionable insights — so managers can spot stalled deals and coach with confidence.</li>
+            </ul>
+          </div>
+        </div>
+
+      </div>
+
+      <!-- RIGHT: visual + quote -->
+      <div class="challenge-visual">
+        <img id="chaVisualImg" src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?fm=jpg&q=80&w=1200&auto=format&fit=crop" alt="Sales team facing repetitive manual workflows">
+        <div class="challenge-quote">
+          <p id="chaQuoteText">"Less busywork, more selling — MountScale runs the routine so your team doesn't have to."</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+<!-- ================= /Industry challenges ================= -->
+
 <!-- ================= Sales Automation Workflow (Bracket) ================= -->
 <section id="workflow" class="msw-section">
   <div class="section-inner">
@@ -391,7 +695,7 @@
         <span class="contact-icon">
           <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.127.96.362 1.903.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.907.338 1.85.573 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
         </span>
-        <p>+91 63668 67327</p>
+        <p>+91 63668 67237</p>
       </div>
       <div class="contact-row">
         <span class="contact-icon">
@@ -481,6 +785,55 @@ image:"https://images.unsplash.com/photo-1599658880436-c61792e70672?auto=format&
     });
   });
 
+  // ---- Industry challenges accordion (moved from home page) ----
+  const chaVisualImg = document.getElementById('chaVisualImg');
+  const chaQuoteText = document.getElementById('chaQuoteText');
+  document.querySelectorAll('.cha-item').forEach((item) => {
+    item.querySelector('.cha-head').addEventListener('click', () => {
+      const alreadyActive = item.classList.contains('is-active');
+      document.querySelectorAll('.cha-item').forEach((i) => i.classList.remove('is-active'));
+      if (!alreadyActive) {
+        item.classList.add('is-active');
+        if (chaVisualImg && item.dataset.img) chaVisualImg.src = item.dataset.img;
+        if (chaQuoteText && item.dataset.quote) chaQuoteText.textContent = `"${item.dataset.quote}"`;
+      }
+    });
+  });
+
+  // ---- Sales pain points: sticky list follows the panel in view ----
+  (() => {
+    const links = document.querySelectorAll('.pain-link');
+    const panels = document.querySelectorAll('.pain-panel');
+    if (!links.length || !panels.length) return;
+
+    const setActive = (id) => {
+      links.forEach((l) => {
+        const on = l.dataset.target === id;
+        l.classList.toggle('is-active', on);
+        l.setAttribute('aria-current', on ? 'true' : 'false');
+        // keep the active chip visible in the horizontal mobile bar
+        if (on && window.innerWidth <= 860) {
+          l.scrollIntoView({ block: 'nearest', inline: 'center', behavior: 'smooth' });
+        }
+      });
+    };
+
+    links.forEach((link) => {
+      link.addEventListener('click', () => {
+        const target = document.getElementById(link.dataset.target);
+        if (target) target.scrollIntoView({ behavior: 'smooth', block: 'center' });
+        setActive(link.dataset.target);
+      });
+    });
+
+    if ('IntersectionObserver' in window) {
+      const spy = new IntersectionObserver((entries) => {
+        entries.forEach((entry) => { if (entry.isIntersecting) setActive(entry.target.id); });
+      }, { rootMargin: '-45% 0px -45% 0px' });
+      panels.forEach((p) => spy.observe(p));
+    }
+  })();
+
   const navbar = document.getElementById('navbar');
   let lastY = window.scrollY;
   window.addEventListener('scroll', () => {
@@ -504,6 +857,13 @@ image:"https://images.unsplash.com/photo-1599658880436-c61792e70672?auto=format&
           opacity: 1, y: 0, duration: 0.8, ease: 'power3.out'
         }
       );
+    });
+
+    gsap.utils.toArray('.pain-panel').forEach(panel => {
+      gsap.fromTo(panel, { opacity: 0, y: 40 }, {
+        scrollTrigger: { trigger: panel, start: 'top 85%' },
+        opacity: 1, y: 0, duration: 0.8, ease: 'power3.out'
+      });
     });
 
     gsap.utils.toArray('.pf-tabs').forEach(list => {
