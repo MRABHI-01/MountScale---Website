@@ -832,3 +832,115 @@
   .ph-float,.am-chip,.af-drop,.afu-row.is-late,.ph-chart span{animation:none;}
   .af-drop{opacity:.8;}
 }
+
+#challenges{
+  padding:60px 24px 90px;
+  background:#fff;
+}
+
+.challenge-wrapper{
+  display:grid;grid-template-columns:1.1fr .9fr;gap:48px;align-items:start;
+}
+@media (max-width:900px){ .challenge-wrapper{grid-template-columns:1fr;} }
+
+.challenge-accordion{display:flex;flex-direction:column;gap:10px;}
+.cha-item{
+  border:1px solid var(--border);border-radius:16px;overflow:hidden;
+  background:#fff;transition:background .4s var(--ease), border-color .4s var(--ease);
+}
+.cha-item.is-active{
+  background:linear-gradient(120deg,var(--blue),var(--accent));
+  border-color:transparent;
+}
+.cha-head{
+  width:100%;display:flex;align-items:center;gap:16px;
+  padding:20px 22px;background:none;border:none;cursor:pointer;text-align:left;
+  font-family:inherit;
+}
+.cha-num{font-size:.8rem;font-weight:800;color:var(--blue);letter-spacing:.05em;}
+.cha-item.is-active .cha-num{color:rgba(255,255,255,0.75);}
+.cha-title{flex:1;font-size:1.05rem;font-weight:700;color:var(--text);}
+.cha-item.is-active .cha-title{color:#fff;}
+.cha-arrow{font-size:1.1rem;color:var(--text-soft);transition:transform .4s var(--ease);}
+.cha-item.is-active .cha-arrow{color:#fff;transform:rotate(45deg);}
+
+.cha-body{
+  max-height:0;overflow:hidden;
+  transition:max-height .5s var(--ease), padding .5s var(--ease);
+  padding:0 22px;
+}
+.cha-item.is-active .cha-body{max-height:260px;padding:0 22px 22px;}
+.cha-body ul{list-style:none;display:flex;flex-direction:column;gap:8px;}
+.cha-body li{
+  font-size:.92rem;line-height:1.55;color:rgba(255,255,255,0.92);
+  padding-left:18px;position:relative;
+}
+.cha-body li::before{
+  content:'';position:absolute;left:0;top:9px;width:6px;height:6px;
+  border-radius:50%;background:#fff;
+}
+
+.challenge-visual{position:sticky;top:110px;}
+.challenge-visual img{
+  width:100%;height:340px;object-fit:cover;border-radius:22px;
+  border:1px solid var(--border);box-shadow:var(--shadow-soft);
+}
+.challenge-quote{
+  margin-top:-40px;position:relative;z-index:2;margin-left:24px;margin-right:24px;
+  background:#fff;border:1px solid var(--blue);border-radius:16px;
+  padding:20px 22px;box-shadow:0 20px 40px -22px rgba(37,99,235,.35);
+}
+.challenge-quote p{font-size:.92rem;font-style:italic;line-height:1.6;color:var(--text);}
+
+
+#challenges .section-head h2 .grad{color:#0058ED;}
+
+
+/* ---------- Post Sales ---------- */
+section[id]{scroll-margin-top:100px;}
+.ps-section{padding:90px 24px 70px;background:linear-gradient(180deg,#fff 0%,var(--light) 100%);}
+.ps-section .section-head h2 .grad{color:#0055EC;}
+
+.ps-grid{
+  display:grid;grid-template-columns:repeat(3,1fr);gap:22px;
+  max-width:1100px;margin:0 auto;
+}
+@media (max-width:900px){.ps-grid{grid-template-columns:repeat(2,1fr);}}
+@media (max-width:560px){.ps-grid{grid-template-columns:1fr;}}
+
+.ps-card{
+  position:relative;overflow:hidden;
+  padding:34px 28px 30px;border-radius:24px;
+  background:linear-gradient(160deg,rgba(255,255,255,0.95),rgba(234,244,255,0.6));
+  border:1px solid var(--border);
+  box-shadow:0 22px 48px -32px rgba(37,99,235,0.3);
+  transition:box-shadow .5s var(--ease), border-color .5s var(--ease);
+}
+.ps-card::before{
+  content:'';position:absolute;top:0;left:28px;
+  width:46px;height:3px;border-radius:0 0 999px 999px;background:#0055EC;
+}
+.ps-card:hover{border-color:rgba(37,99,235,0.3);box-shadow:0 34px 70px -30px rgba(37,99,235,0.42);}
+.ps-icon{
+  width:50px;height:50px;border-radius:15px;margin-bottom:18px;
+  display:flex;align-items:center;justify-content:center;color:#fff;
+  background:linear-gradient(135deg,var(--blue),var(--accent));
+  box-shadow:0 12px 24px -8px rgba(37,99,235,0.5);
+}
+.ps-card h3{font-size:1.15rem;font-weight:700;letter-spacing:-0.02em;margin-bottom:8px;}
+.ps-card p{color:var(--text-soft);font-size:.94rem;line-height:1.65;}
+
+.ps-shared{
+  max-width:1100px;margin:28px auto 0;padding:20px 24px;border-radius:20px;
+  display:flex;flex-wrap:wrap;align-items:center;justify-content:center;gap:12px 14px;
+  background:#fff;border:1px solid var(--border);
+}
+.ps-shared-label{
+  font-size:12px;font-weight:700;letter-spacing:.1em;text-transform:uppercase;
+  color:var(--text-soft);margin-right:6px;
+}
+.ps-chip{
+  display:inline-flex;align-items:center;gap:8px;
+  padding:10px 18px;border-radius:999px;font-weight:700;font-size:.92rem;
+  color:var(--blue);background:var(--light);border:1px solid var(--border);
+}
